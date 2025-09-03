@@ -11,3 +11,15 @@ def get_char_count(string):
         else:
             char_count[char] += 1
     return char_count
+
+def sort_on(items):
+    return items["num"]
+
+def sort_char_count(dict):
+    char_count = []
+    for char in dict:
+        count = dict[char]
+        char_count.append({"char": char, "num": count})
+    char_count.sort(reverse=True, key=sort_on)
+    return char_count
+
